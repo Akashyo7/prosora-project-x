@@ -128,14 +128,12 @@ def show_api_key_instructions():
     print("="*70)
     
     print(f"""
-Your current Gemini API key from config.py: AIzaSyB8kyermgcBRRN27yy3UnB2KBzOQPt3_OQ
-
 🔐 TO ADD IN STREAMLIT CLOUD SECRETS:
 1. In Streamlit Cloud deployment settings
 2. Go to "Advanced settings" 
 3. Add this in the secrets section:
 
-GEMINI_API_KEY = "AIzaSyB8kyermgcBRRN27yy3UnB2KBzOQPt3_OQ"
+GEMINI_API_KEY = "YOUR_ACTUAL_API_KEY_HERE"
 
 ⚠️ SECURITY NOTE:
 - Your API key will be secure in Streamlit Cloud secrets

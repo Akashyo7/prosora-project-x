@@ -5,7 +5,15 @@ load_dotenv()
 
 class Config:
     # API Keys
-    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyB8kyermgcBRRN27yy3UnB2KBzOQPt3_OQ")
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    
+    @classmethod
+    def validate_api_keys(cls):
+        """Validate that required API keys are present"""
+        if not cls.GEMINI_API_KEY:
+            raise ValueError(
+                "GEMINI_API_KEY is required! Please set it in your .env file or environment variables."
+            )
     SERP_API_KEY = os.getenv("SERP_API_KEY")
     YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
     TWITTER_BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN")
