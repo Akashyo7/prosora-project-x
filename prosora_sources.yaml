@@ -1,0 +1,307 @@
+# Prosora Personalized Content Sources Configuration
+# Your curated, weighted knowledge sources
+
+# Google Search Integration for Supporting Evidence
+google_search:
+  - name: "Google Scholar"
+    search_type: "academic"
+    credibility: 0.9
+    domains: ["tech", "politics", "product", "finance"]
+    use_case: "academic_validation"
+    query_templates:
+      - "site:scholar.google.com {topic} research"
+      - "{topic} academic study"
+      - "{topic} peer reviewed"
+    
+  - name: "Google News"
+    search_type: "news"
+    credibility: 0.7
+    domains: ["tech", "politics", "finance"]
+    use_case: "current_events"
+    query_templates:
+      - "site:news.google.com {topic}"
+      - "{topic} latest news"
+      - "{topic} recent developments"
+    
+  - name: "Google Trends"
+    search_type: "trends"
+    credibility: 0.8
+    domains: ["tech", "product", "finance"]
+    use_case: "trend_validation"
+    query_templates:
+      - "{topic} trend analysis"
+      - "{topic} market interest"
+      - "{topic} search volume"
+
+premium_sources:
+  # Tech Leadership & Innovation
+  - name: "a16z Podcast"
+    url: "UC7cs8q-gJRlGwj4A8OmCmXg"
+    type: "youtube"
+    credibility: 0.95
+    domains: ["tech", "product", "finance"]
+    frequency: "weekly"
+    relevance: 0.95
+    notes: "Marc Andreessen, Ben Horowitz - top-tier VC insights"
+
+  - name: "First Round Review"
+    rss_url: "https://review.firstround.com/feed"
+    url: "https://review.firstround.com"
+    type: "blog"
+    credibility: 0.95
+    domains: ["product", "tech", "leadership"]
+    frequency: "weekly"
+    relevance: 0.9
+    notes: "Premium product management insights"
+
+  - name: "Stratechery"
+    rss_url: "https://stratechery.com/feed/"
+    url: "https://stratechery.com"
+    type: "newsletter"
+    credibility: 0.95
+    domains: ["tech", "strategy", "business"]
+    frequency: "daily"
+    relevance: 0.9
+    notes: "Ben Thompson - tech strategy analysis"
+
+  # Political & Policy
+  - name: "Politico Playbook"
+    email: "playbook@politico.com"
+    type: "email"
+    credibility: 0.85
+    domains: ["politics", "policy"]
+    frequency: "daily"
+    relevance: 0.8
+    notes: "DC insider political intelligence"
+
+  - name: "The Dispatch"
+    url: "https://thedispatch.com/feed/"
+    type: "newsletter"
+    credibility: 0.8
+    domains: ["politics", "policy"]
+    frequency: "daily"
+    relevance: 0.7
+    notes: "Conservative policy analysis"
+
+  # FinTech & Finance
+  - name: "Lenny's Newsletter"
+    email: "team@lenny.com"
+    type: "email"
+    credibility: 0.9
+    domains: ["product", "growth"]
+    frequency: "weekly"
+    relevance: 0.95
+    notes: "Premium product management content"
+
+  - name: "CB Insights"
+    rss_url: "https://www.cbinsights.com/feed"
+    url: "https://www.cbinsights.com"
+    type: "blog"
+    credibility: 0.85
+    domains: ["tech", "finance", "startups"]
+    frequency: "weekly"
+    relevance: 0.8
+    notes: "Data-driven startup insights"
+
+standard_sources:
+  # Business & Markets
+  - name: "Harvard Business Review"
+    rss_url: "https://hbr.org/feed"
+    url: "https://hbr.org"
+    type: "blog"
+    credibility: 0.8
+    domains: ["business", "leadership", "strategy"]
+    frequency: "daily"
+    relevance: 0.7
+    notes: "Academic business insights"
+
+  - name: "McKinsey Insights"
+    rss_url: "https://www.mckinsey.com/feed/articles"
+    url: "https://www.mckinsey.com"
+    type: "blog"
+    credibility: 0.8
+    domains: ["strategy", "business", "tech"]
+    frequency: "weekly"
+    relevance: 0.7
+    notes: "Consulting firm insights"
+
+  # Product & Tech
+  - name: "Product Hunt Daily"
+    url: "https://www.producthunt.com/feed"
+    type: "newsletter"
+    credibility: 0.7
+    domains: ["product", "tech", "startups"]
+    frequency: "daily"
+    relevance: 0.6
+    notes: "New product discoveries"
+
+experimental_sources:
+  # Social Signals
+  - name: "Hacker News"
+    url: "https://hnrss.org/frontpage"
+    type: "social"
+    credibility: 0.6
+    domains: ["tech"]
+    frequency: "daily"
+    relevance: 0.7
+    notes: "Tech community discussions"
+
+  - name: "LinkedIn Tech Leaders"
+    type: "social"
+    credibility: 0.5
+    domains: ["tech", "product", "leadership"]
+    frequency: "daily"
+    relevance: 0.6
+    accounts: ["naval", "pmarca", "chamath", "balajis"]
+    notes: "Social media insights from tech leaders"
+
+# Your Personal Email Subscriptions
+email_subscriptions:
+  - sender: "newsletter@stratechery.com"
+    name: "Stratechery Daily Update"
+    credibility: 0.95
+    
+  - sender: "team@lenny.com"
+    name: "Lenny's Newsletter"
+    credibility: 0.9
+    
+  - sender: "playbook@politico.com"
+    name: "Politico Playbook"
+    credibility: 0.85
+    
+  - sender: "insights@cbinsights.com"
+    name: "CB Insights Newsletter"
+    credibility: 0.85
+
+# YouTube Channels (Your Curated List)
+youtube_channels:
+  - channel_id: "UC7cs8q-gJRlGwj4A8OmCmXg"
+    name: "a16z"
+    credibility: 0.95
+    
+  - channel_id: "UCG4H_2MLswfDKdOCjwZcHlA"
+    name: "First Round"
+    credibility: 0.9
+    
+  - channel_id: "UC-rqL-1oaQ91R38LkbJZHjg"
+    name: "Y Combinator"
+    credibility: 0.9
+
+# Social Media Accounts (Your Curated Thought Leaders)
+social_accounts:
+  twitter:
+    - handle: "naval"
+      name: "Naval Ravikant"
+      credibility: 0.9
+      domains: ["tech", "philosophy", "startups"]
+      
+    - handle: "pmarca"
+      name: "Marc Andreessen"
+      credibility: 0.95
+      domains: ["tech", "finance", "policy"]
+      
+    - handle: "chamath"
+      name: "Chamath Palihapitiya"
+      credibility: 0.8
+      domains: ["tech", "finance", "politics"]
+
+  linkedin:
+    - profile: "reidhoffman"
+      name: "Reid Hoffman"
+      credibility: 0.9
+      domains: ["tech", "product", "strategy"]
+
+# Content Quality Weights
+quality_weights:
+  premium: 1.0
+  standard: 0.7
+  experimental: 0.4
+
+# Domain Expertise Weights (Your Personal Interests)
+domain_weights:
+  tech: 0.3
+  politics: 0.2
+  product: 0.25
+  finance: 0.25
+
+# Credibility Thresholds
+credibility_thresholds:
+  high: 0.8  # Use for primary insights
+  medium: 0.6  # Use for supporting evidence
+  low: 0.4  # Use for experimental ideas
+
+# Global Megatrends for Radar Chart Overlay
+megatrends:
+  - name: "AI & Automation"
+    category: "tech"
+    relevance_score: 95
+    growth_trajectory: "exponential"
+    time_horizon: "2024-2030"
+    your_alignment: 90  # How aligned your expertise is (0-100)
+    
+  - name: "Digital Democracy"
+    category: "politics"
+    relevance_score: 75
+    growth_trajectory: "steady"
+    time_horizon: "2024-2035"
+    your_alignment: 85
+    
+  - name: "Product-Led Growth"
+    category: "product"
+    relevance_score: 80
+    growth_trajectory: "accelerating"
+    time_horizon: "2024-2028"
+    your_alignment: 88
+    
+  - name: "Embedded Finance"
+    category: "finance"
+    relevance_score: 85
+    growth_trajectory: "exponential"
+    time_horizon: "2024-2027"
+    your_alignment: 82
+    
+  - name: "Climate Tech"
+    category: "tech"
+    relevance_score: 90
+    growth_trajectory: "accelerating"
+    time_horizon: "2024-2040"
+    your_alignment: 65
+    
+  - name: "Regulatory Technology"
+    category: "politics"
+    relevance_score: 70
+    growth_trajectory: "steady"
+    time_horizon: "2024-2030"
+    your_alignment: 78
+    
+  - name: "No-Code/Low-Code"
+    category: "product"
+    relevance_score: 75
+    growth_trajectory: "steady"
+    time_horizon: "2024-2028"
+    your_alignment: 70
+    
+  - name: "DeFi Evolution"
+    category: "finance"
+    relevance_score: 80
+    growth_trajectory: "volatile"
+    time_horizon: "2024-2030"
+    your_alignment: 75
+
+# Megatrend Categories for Radar Chart
+megatrend_categories:
+  - name: "Technological Disruption"
+    weight: 0.3
+    trends: ["AI & Automation", "Climate Tech", "No-Code/Low-Code"]
+    
+  - name: "Governance Evolution"
+    weight: 0.2
+    trends: ["Digital Democracy", "Regulatory Technology"]
+    
+  - name: "Business Model Innovation"
+    weight: 0.25
+    trends: ["Product-Led Growth", "Embedded Finance"]
+    
+  - name: "Financial System Transformation"
+    weight: 0.25
+    trends: ["Embedded Finance", "DeFi Evolution"]
